@@ -1,0 +1,54 @@
+{
+    "name": "mahmudz/bangla-somoy",
+    "description": "Use bangla time in your laravel project",
+    "keywords": [
+        "mahmudz",
+        "bangla-somoy"
+    ],
+    "homepage": "https://github.com/mahmudz/bangla-somoy",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mahmudul Hasan",
+            "email": "mahmudbappy.pri@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mahmudz\\BanglaSomoy\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mahmudz\\BanglaSomoy\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mahmudz\\BanglaSomoy\\BanglaSomoyServiceProvider"
+            ],
+            "aliases": {
+                "BanglaSomoy": "Mahmudz\\BanglaSomoy\\BanglaSomoyFacade"
+            }
+        }
+    }
+}
