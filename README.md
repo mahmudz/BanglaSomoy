@@ -20,20 +20,29 @@ composer require mahmudz/bangla-somoy
 use Mahmudz\BanglaSomoy\BanglaSomoy;
 
 // To convert Enlgish to Bangla
-BanglaSomoy::toEnglish('০১-১২-১৯৯৫ শুক্রবার ০১:০২:১২ অপরাহ্ন');
+$bnTime = BanglaSomoy::toBangla('01-12-1995 Friday 01:02:12 Pm');
 
 // To convert Bangla to English
-BanglaSomoy::toBangla('01-12-1995 Friday 01:02:12 Pm');
+$enTime = BanglaSomoy::toEnglish('০১-১২-১৯৯৫ শুক্রবার ০১:০২:১২ অপরাহ্ন');
 ```
 
 ## Usage in blade file
+Before doing that, please register facade class in config ```config/app.php``` file
+
+``` php
+// Register service provider as providers.
+Mahmudz\BanglaSomoy\BanglaSomoyServiceProvider::class,
+
+// Register class as aliases.
+'BanglaSomoy' => Mahmudz\BanglaSomoy\BanglaSomoyFacade::class,
+```
 
 ``` php
 // To convert Enlgish to Bangla
-{{ BanglaSomoy::toEnglish('০১-১২-১৯৯৫ শুক্রবার ০১:০২:১২ অপরাহ্ন') }}
+{{ BanglaSomoy::toBangla('01-12-1995 Friday 01:02:12 Pm') }}
 
 // To convert Bangla to English
-{{ BanglaSomoy::toBangla('01-12-1995 Friday 01:02:12 Pm') }}
+{{ BanglaSomoy::toEnglish('০১-১২-১৯৯৫ শুক্রবার ০১:০২:১২ অপরাহ্ন') }}
 
 ```
 
