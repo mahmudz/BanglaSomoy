@@ -1,6 +1,7 @@
 {
     "name": "mahmudz/bangla-somoy",
     "description": "Convert english date/time/numbers to bangla(vice-versa) in your laravel project.",
+    "version" : "1.0.1",
     "keywords": [
         "mahmudz",
         "bangla-somoy"
