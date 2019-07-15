@@ -1,6 +1,6 @@
 {
     "name": "mahmudz/bangla-somoy",
-    "description": "Use bangla time in your laravel project",
+    "description": "Convert english date/time/numbers to bangla(vice-versa) in your laravel project.",
     "keywords": [
         "mahmudz",
         "bangla-somoy"
@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^7.1",
-        "illuminate/support": "5.8.*"
+        "illuminate/support": "5.5.*"
     },
     "require-dev": {
         "orchestra/testbench": "3.8.*",
